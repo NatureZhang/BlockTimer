@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4C7C3581CC9303900F4038B /* TestTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C7C3571CC9303900F4038B /* TestTimerViewController.m */; };
 		F4F9EB561CC6828D0087A015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB551CC6828D0087A015 /* main.m */; };
 		F4F9EB591CC6828D0087A015 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB581CC6828D0087A015 /* AppDelegate.m */; };
 		F4F9EB5C1CC6828D0087A015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB5B1CC6828D0087A015 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		F4F9EB641CC6828D0087A015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9EB621CC6828D0087A015 /* LaunchScreen.storyboard */; };
 		F4F9EB6F1CC6828D0087A015 /* NSTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB6E1CC6828D0087A015 /* NSTimerTests.m */; };
 		F4F9EB7A1CC6828D0087A015 /* NSTimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB791CC6828D0087A015 /* NSTimerUITests.m */; };
+		F4F9EB8A1CC682D70087A015 /* NSTimer+TimerBlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F9EB891CC682D70087A015 /* NSTimer+TimerBlockSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4C7C3561CC9303900F4038B /* TestTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTimerViewController.h; sourceTree = "<group>"; };
+		F4C7C3571CC9303900F4038B /* TestTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTimerViewController.m; sourceTree = "<group>"; };
 		F4F9EB511CC6828D0087A015 /* NSTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F9EB551CC6828D0087A015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4F9EB571CC6828D0087A015 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		F4F9EB751CC6828D0087A015 /* NSTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F9EB791CC6828D0087A015 /* NSTimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerUITests.m; sourceTree = "<group>"; };
 		F4F9EB7B1CC6828D0087A015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F9EB881CC682D70087A015 /* NSTimer+TimerBlockSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+TimerBlockSupport.h"; sourceTree = "<group>"; };
+		F4F9EB891CC682D70087A015 /* NSTimer+TimerBlockSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+TimerBlockSupport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,13 @@
 		F4F9EB531CC6828D0087A015 /* NSTimer */ = {
 			isa = PBXGroup;
 			children = (
+				F4F9EB871CC682AA0087A015 /* New Group */,
 				F4F9EB571CC6828D0087A015 /* AppDelegate.h */,
 				F4F9EB581CC6828D0087A015 /* AppDelegate.m */,
 				F4F9EB5A1CC6828D0087A015 /* ViewController.h */,
 				F4F9EB5B1CC6828D0087A015 /* ViewController.m */,
+				F4C7C3561CC9303900F4038B /* TestTimerViewController.h */,
+				F4C7C3571CC9303900F4038B /* TestTimerViewController.m */,
 				F4F9EB5D1CC6828D0087A015 /* Main.storyboard */,
 				F4F9EB601CC6828D0087A015 /* Assets.xcassets */,
 				F4F9EB621CC6828D0087A015 /* LaunchScreen.storyboard */,
@@ -138,6 +147,15 @@
 				F4F9EB7B1CC6828D0087A015 /* Info.plist */,
 			);
 			path = NSTimerUITests;
+			sourceTree = "<group>";
+		};
+		F4F9EB871CC682AA0087A015 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9EB881CC682D70087A015 /* NSTimer+TimerBlockSupport.h */,
+				F4F9EB891CC682D70087A015 /* NSTimer+TimerBlockSupport.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F9EB8A1CC682D70087A015 /* NSTimer+TimerBlockSupport.m in Sources */,
 				F4F9EB5C1CC6828D0087A015 /* ViewController.m in Sources */,
 				F4F9EB591CC6828D0087A015 /* AppDelegate.m in Sources */,
 				F4F9EB561CC6828D0087A015 /* main.m in Sources */,
+				F4C7C3581CC9303900F4038B /* TestTimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +516,7 @@
 				F4F9EB801CC6828D0087A015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4F9EB811CC6828D0087A015 /* Build configuration list for PBXNativeTarget "NSTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +525,7 @@
 				F4F9EB831CC6828D0087A015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4F9EB841CC6828D0087A015 /* Build configuration list for PBXNativeTarget "NSTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +534,7 @@
 				F4F9EB861CC6828D0087A015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

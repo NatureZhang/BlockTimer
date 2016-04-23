@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TestTimerViewController.h"
+//typedef <#returnType#>(^<#name#>)(<#arguments#>);
 
 @interface ViewController ()
 
@@ -14,14 +16,31 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   __block int i = 1;
+    
+    NSLog(@"%@", ^(){ i = 2;});
+    
+    NSMutableArray *arr1 = [NSMutableArray array];
+    NSMutableArray *arr2 = [NSMutableArray array];
+    
+    [arr1 addObject:arr2];
+    [arr2 addObject:arr1];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+}
+- (IBAction)gotoTimerVC:(id)sender {
+    
+    TestTimerViewController *vc = [[TestTimerViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
